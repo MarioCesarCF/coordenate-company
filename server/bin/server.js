@@ -1,4 +1,6 @@
-const app = require('..src/app.js');
+const app = require('../src');
+require("dotenv").config();
+
 const port = normalizaPort(process.env.PORT || '3000');
 
 function normalizaPort(value) {
@@ -7,7 +9,7 @@ function normalizaPort(value) {
     return value;
   }
   if(port >= 0) {
-    return port;
+    return value;
   }
   return false;
 }

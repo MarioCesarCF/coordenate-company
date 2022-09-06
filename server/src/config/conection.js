@@ -1,4 +1,4 @@
-const mongoose = requie('mongoose');
+const mongoose = require('mongoose');
 require('dotenv').config();
 
 const connection = async () => {
