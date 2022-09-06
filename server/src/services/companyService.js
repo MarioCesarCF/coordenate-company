@@ -3,10 +3,14 @@ const connection = require('../config/conection');
 
 connection();
 
-exports.createCompany = async (company) => {
+exports.createCompany = async (company) => { 
     return await Company.create(company);
 };
 
 exports.getAll = async () => {
     return await Company.find();
+}
+
+exports.delete = async (id) => {
+    return await Company.findByIdAndDelete(id);
 }

@@ -6,8 +6,9 @@ const company = new Schema({
         type: String,
         required: true
     },
-    cnpj: {
-        type: String,
+    documento: {
+        type: Number,
+        unique: true,
         required: true
     },
     cidade: {
@@ -15,14 +16,14 @@ const company = new Schema({
         required: true
     },
     coordenadaX: {
-        type: String,
+        type: Number,
         required: true
     },
     coordenadaY :{
-        type: String,
+        type: Number,
         required: true
     },
-    informacoesGeriais: {}
+    informacoes: {}
 })
 
 module.exports = mongoose.model('company', company)
